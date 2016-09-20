@@ -3,7 +3,5 @@ module.exports = {
   createPort: require('ut-port-postgres'),
   createTT: false,
   retry: false,
-  imports: [
-
-  ]
+  imports: ['subscription']
 }

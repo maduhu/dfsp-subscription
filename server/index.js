@@ -5,6 +5,7 @@ module.exports = {
     require('../script')
   ],
   modules: {
-    identity: require('../service/identity')
+    identity: require('../service/identity'),
+    subscription: require('../service/subscription')
   }
 }
