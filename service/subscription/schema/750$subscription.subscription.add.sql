@@ -4,7 +4,8 @@
 ) RETURNS TABLE(
   "subscriptionId" integer,
   "actorId" CHARACTER varying(25),
-  "phoneNumber" CHARACTER varying(25)
+  "phoneNumber" CHARACTER varying(25),
+  "isSingleResult" boolean
 )
 AS
 $body$
@@ -23,7 +24,8 @@ $body$
   SELECT
     s."subscriptionId",
     s."actorId",
-    p."phoneNumber"
+    p."phoneNumber",
+    true AS "isSingleResult"
   FROM s, p
 $body$
 LANGUAGE SQL

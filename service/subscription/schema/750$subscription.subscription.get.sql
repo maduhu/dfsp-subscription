@@ -3,13 +3,15 @@
   "@phoneNumber" CHARACTER varying
 ) RETURNS TABLE(
   "actorId" CHARACTER varying(25),
-  "phoneNumber" CHARACTER varying(25)
+  "phoneNumber" CHARACTER varying(25),
+  "isSingleResult" boolean
 )
 AS
 $body$
   SELECT
     s."actorId" AS "actorId",
-    p."phoneNumber" AS "phoneNumber"
+    p."phoneNumber" AS "phoneNumber",
+    true AS "isSingleResult"
   FROM
     subscription.subscription AS s
   JOIN

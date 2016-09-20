@@ -1,7 +1,8 @@
 ﻿CREATE OR REPLACE FUNCTION subscription."subscription.remove"(
   "@subscriptionId" integer
 ) RETURNS TABLE(
-  "subscriptionId" integer
+  "subscriptionId" integer,
+  "isSingleResult" boolean
 )
 AS
 $body$
@@ -17,7 +18,8 @@ $body$
     RETURNING *
   )
   SELECT
-    s."subscriptionId"
+    s."subscriptionId",
+    true AS "isSingleResult"
   FROM s, p
 $body$
 LANGUAGE SQL
