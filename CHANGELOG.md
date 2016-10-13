@@ -1,3 +1,13 @@
+<a name="0.2.1"></a>
+## [0.2.1](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.2.0...v0.2.1) (2016-10-13)
+
+
+### Bug Fixes
+
+* upgrade dependencies ([cf3cfd9](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/cf3cfd9))
+
+
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.1.1...v0.2.0) (2016-10-11)
 
