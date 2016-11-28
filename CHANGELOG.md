@@ -1,3 +1,16 @@
+<a name="0.3.2"></a>
+## [0.3.2](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.1...v0.3.2) (2016-11-21)
+
+
+### Bug Fixes
+
+* add subscription.subscription.add validation ([11055e4](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/11055e4))
+* add validations ([7abcc43](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/7abcc43))
+* issue [#283](https://github.com/LevelOneProject/dfsp-subscription/issues/283) - DFSP License files are incorrect ([3c10ccb](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/3c10ccb))
+* update dependencies ([fab1912](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/fab1912))
+
+
+
 <a name="0.3.1"></a>
 ## [0.3.1](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.0...v0.3.1) (2016-10-14)
 
