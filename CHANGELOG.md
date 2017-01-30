@@ -1,3 +1,13 @@
+<a name="0.3.5"></a>
+## [0.3.5](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.4...v0.3.5) (2017-01-30)
+
+
+### Bug Fixes
+
+* circleci settings and npm commands ([5c9f2d2](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/5c9f2d2))
+
+
+
 <a name="0.3.4"></a>
 ## [0.3.4](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.3...v0.3.4) (2016-12-16)
 
