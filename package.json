@@ -33,14 +33,14 @@
   },
   "dependencies": {
     "joi": "9.1.1",
-    "ut-bus": "^5.7.0",
-    "ut-error": "^5.3.16",
-    "ut-port-console": "^6.1.12",
-    "ut-port-httpserver": "8.1.8",
+    "ut-bus": "^5.9.0",
+    "ut-error": "^5.4.2",
+    "ut-port-console": "^6.2.5",
+    "ut-port-httpserver": "8.7.1",
     "ut-port-performance": "^5.4.7",
-    "ut-port-postgres": "^5.7.5",
-    "ut-port-script": "^5.4.7",
-    "ut-run": "^7.2.1",
+    "ut-port-postgres": "^5.7.7",
+    "ut-port-script": "^5.5.1",
+    "ut-run": "^8.1.0",
     "pm2": "2.0.18"
   },
   "devDependencies": {
