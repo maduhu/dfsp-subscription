@@ -1,3 +1,14 @@
+<a name="0.3.8"></a>
+## [0.3.8](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.7...v0.3.8) (2017-04-21)
+
+
+### Bug Fixes
+
+* add shrinkwrap ([28e8f84](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/28e8f84))
+* shrinkwrap private nexus links ([30bd1b7](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/30bd1b7))
+
+
+
 <a name="0.3.7"></a>
 ## [0.3.7](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.6...v0.3.7) (2017-04-21)
 
