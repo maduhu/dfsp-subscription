@@ -21,7 +21,9 @@ BEGIN
     END IF;
 
     SELECT
-     (SELECT ph."phoneId" FROM subscription."phone.add"("@phoneNumber") ph)
+      ph."phoneId" 
+    FROM 
+      subscription."phone.add"("@phoneNumber") ph
     INTO
       "@phoneId";
  WITH
