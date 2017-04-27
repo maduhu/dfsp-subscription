@@ -10,9 +10,20 @@
 AS
 $BODY$
 DECLARE
-	"@phoneId" INTEGER := (SELECT ph."phoneId" FROM subscription."phone.add"("@phoneNumber") ph);
+	"@phoneId" INTEGER;
 	"@subscriptionId" INTEGER;
 BEGIN
+    IF "@actorId" IS NULL THEN
+        RAISE EXCEPTION 'subscription.actorIdMissing';
+    END IF;
+    IF "@phoneNumber" IS NULL THEN
+        RAISE EXCEPTION 'subscription.phoneNumberMissing';
+    END IF;
+
+    SELECT
+     (SELECT ph."phoneId" FROM subscription."phone.add"("@phoneNumber") ph)
+    INTO
+      "@phoneId";
  WITH
    s as (
       INSERT INTO subscription.subscription ("phoneId", "actorId")
