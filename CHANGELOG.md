@@ -1,3 +1,16 @@
+<a name="0.3.9"></a>
+## [0.3.9](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.8...v0.3.9) (2017-04-28)
+
+
+### Bug Fixes
+
+* add phone.add procedure and refactor subscription.add/fetch ([239921e](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/239921e))
+* add subscription.fetch as api call ([a122322](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/a122322))
+* fix sql query ([8f87a72](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/8f87a72))
+* refactor subscription.add to raise exceptions ([a5b1f84](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/a5b1f84))
+
+
+
 <a name="0.3.8"></a>
 ## [0.3.8](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.7...v0.3.8) (2017-04-21)
 
