@@ -15,6 +15,7 @@ $body$
   p as (
     DELETE FROM subscription."phone"
     WHERE "phoneId" = (SELECT "phoneId" FROM s)
+    AND NOT EXISTS (SELECT 1 FROM subscription."subscription" WHERE "phoneId" = (SELECT "phoneId" FROM s))
     RETURNING *
   )
   SELECT
