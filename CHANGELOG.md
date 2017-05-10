@@ -1,3 +1,13 @@
+<a name="0.3.10"></a>
+## [0.3.10](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.9...v0.3.10) (2017-05-10)
+
+
+### Bug Fixes
+
+* remove colors from stdout by default ([ff8946d](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/ff8946d))
+
+
+
 <a name="0.3.9"></a>
 ## [0.3.9](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.8...v0.3.9) (2017-04-28)
 
