@@ -1,3 +1,13 @@
+<a name="0.3.11"></a>
+## [0.3.11](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.10...v0.3.11) (2017-05-10)
+
+
+### Bug Fixes
+
+* change logmode to long ([6f69f7a](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/6f69f7a))
+
+
+
 <a name="0.3.10"></a>
 ## [0.3.10](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.9...v0.3.10) (2017-05-10)
 
