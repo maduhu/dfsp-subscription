@@ -1,3 +1,13 @@
+<a name="0.3.12"></a>
+## [0.3.12](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.11...v0.3.12) (2017-05-15)
+
+
+### Bug Fixes
+
+* elk ([84c52f4](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/84c52f4))
+
+
+
 <a name="0.3.11"></a>
 ## [0.3.11](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.10...v0.3.11) (2017-05-10)
 
