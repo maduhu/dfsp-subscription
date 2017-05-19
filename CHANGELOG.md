@@ -1,3 +1,13 @@
+<a name="0.3.13"></a>
+## [0.3.13](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.12...v0.3.13) (2017-05-19)
+
+
+### Bug Fixes
+
+* circle.yml ([abd1a9b](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/abd1a9b))
+
+
+
 <a name="0.3.12"></a>
 ## [0.3.12](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.11...v0.3.12) (2017-05-15)
 
