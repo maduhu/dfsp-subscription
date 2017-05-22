@@ -1,6 +1,6 @@
 {
   "name": "@leveloneproject/dfsp-subscription",
-  "version": "0.3.13",
+  "version": "0.3.14",
   "dependencies": {
     "abstract-leveldown": {
       "version": "2.6.1",

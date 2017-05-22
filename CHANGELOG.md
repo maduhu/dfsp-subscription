@@ -1,3 +1,13 @@
+<a name="0.3.14"></a>
+## [0.3.14](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.13...v0.3.14) (2017-05-22)
+
+
+### Bug Fixes
+
+* log configuration ([437b2e0](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/437b2e0))
+
+
+
 <a name="0.3.13"></a>
 ## [0.3.13](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.12...v0.3.13) (2017-05-19)
 
