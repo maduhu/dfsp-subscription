@@ -1,3 +1,14 @@
+<a name="0.3.15"></a>
+## [0.3.15](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.14...v0.3.15) (2017-05-26)
+
+
+### Bug Fixes
+
+* update dependency to ut-tools ([26b7e97](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/26b7e97))
+* update pipeline ([e609038](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/e609038))
+
+
+
 <a name="0.3.14"></a>
 ## [0.3.14](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.13...v0.3.14) (2017-05-22)
 
