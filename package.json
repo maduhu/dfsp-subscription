@@ -48,7 +48,7 @@
     "blue-tape": "1.0.0",
     "tap-xunit": "1.4.0",
     "ut-port-jsonrpc": "^5.5.9",
-    "ut-tools": "^5.13.5"
+    "ut-tools": "^5.17.16"
   },
   "repository": {
     "type": "git",
