@@ -35,7 +35,7 @@ test({
       }
     },
     {
-      name: 'Missing input params - Raise exception for missing phone number',
+      name: 'Check returned results from subscription add',
       method: 'subscription.subscription.add',
       params: (context) => {
         return {
