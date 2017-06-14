@@ -1,3 +1,6 @@
 require('./integration/start')
 require('./integration/test.subscription.add.js')
+require('./integration/test.subscription.fetch.js')
+require('./integration/test.subscription.get.js')
+require('./integration/test.subscription.remove.js')
 require('./integration/stop')
