@@ -2,7 +2,7 @@ var test = require('ut-run/test')
 var config = require('./../lib/appConfig')
 var joi = require('joi')
 
-const PHONE_NUMBER = '000000000'
+const PHONE_NUMBER = '111111111'
 const ACTOR_ID = '1'
 
 test({
