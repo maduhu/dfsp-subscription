@@ -1,3 +1,17 @@
+<a name="0.3.17"></a>
+## [0.3.17](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.16...v0.3.17) (2017-06-14)
+
+
+### Bug Fixes
+
+* add "ut-port-http" as dependency ([e287f0d](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/e287f0d))
+* add "ut-port-jsonrpc" in package dependencies ([e1c7418](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/e1c7418))
+* add init integration tests ([94cf4d1](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/94cf4d1))
+* add ut-port-http ([59655aa](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/59655aa))
+* remove ut-port-http ([33f7920](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/33f7920))
+
+
+
 <a name="0.3.16"></a>
 ## [0.3.16](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.15...v0.3.16) (2017-06-12)
 
