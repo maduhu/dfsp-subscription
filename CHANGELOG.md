@@ -1,3 +1,14 @@
+<a name="0.3.18"></a>
+## [0.3.18](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.17...v0.3.18) (2017-06-14)
+
+
+### Bug Fixes
+
+* add more integration tests ([0550133](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/0550133))
+* fix phone number ([fd13b1e](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/fd13b1e))
+
+
+
 <a name="0.3.17"></a>
 ## [0.3.17](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.16...v0.3.17) (2017-06-14)
 
