@@ -36,6 +36,7 @@
     "ut-bus": "^5.9.0",
     "ut-error": "^5.4.2",
     "ut-port-console": "~6.2.13",
+    "ut-port-http": "~6.4.0",
     "ut-port-httpserver": "~8.7.1",
     "ut-port-performance": "^5.4.7",
     "ut-port-postgres": "^5.7.7",
