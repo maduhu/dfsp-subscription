@@ -3,6 +3,12 @@ var joi = require('joi')
 var db = null
 // var error = require('./error')
 
+var interpolatePattern = /\{([^}]*)\}/g
+
+var interpolate = function (message, params) {
+  return message.replace(interpolatePattern, (placeHolder, label) => (params[label]))
+}
+
 module.exports = {
   schema: [{
     path: path.join(__dirname, 'schema'),
@@ -42,6 +48,16 @@ module.exports = {
           }
         }
       }
+    })
+  },
+  // notificationTemplateId, destination, params
+  'notification.notification.add': function (msg) {
+    this.super['notification.notificationTemplate.get']({
+      notificationTemplateId: msg.notificationTemplateId
+    })
+    .then((template) => {
+      msg.content = interpolate(template.content, msg.params)
+      return this.super['notification.notification.add'](msg)
     })
   }
 }

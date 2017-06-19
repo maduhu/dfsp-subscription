@@ -3,7 +3,7 @@ module.exports = {
   id: 'httpserver',
   createPort: require('ut-port-httpserver'),
   logLevel: 'trace',
-  api: ['subscription'],
+  api: ['subscription', 'notification'],
   imports: ['subscription.start'],
   port: 8017,
   bundle: 'subscription',
