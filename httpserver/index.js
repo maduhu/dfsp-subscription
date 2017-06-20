@@ -6,11 +6,6 @@ module.exports = {
   api: ['subscription'],
   imports: ['subscription.start'],
   port: 8017,
-  allowXFF: true,
-  disableXsrf: {
-    http: true,
-    ws: true
-  },
   bundle: 'subscription',
   dist: path.resolve(__dirname, '../dist'),
   routes: {
