@@ -1,6 +1,6 @@
 CREATE TABLE notification."notificationTemplate"
 (
-    "notificationTemplateId" SMALLINT NOT NULL,
+    "notificationTemplateId" SERIAL NOT NULL,
     "name" VARCHAR(25),
     "notificationChannelId" SMALLINT,
     "notificationOperationId" SMALLINT,

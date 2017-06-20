@@ -5,7 +5,7 @@ CREATE OR REPLACE FUNCTION notification."notification.add"(
     "@params" JSONB
 ) RETURNS TABLE (
     "notificationId" BIGINT,
-    "notificationTemplateId" SMALLINT,
+    "notificationTemplateId" INTEGER,
     "notificationStatusId" SMALLINT,
     "destination" VARCHAR(100),
     "content" TEXT,
@@ -58,7 +58,7 @@ BEGIN
         "params",
         "createdOn",
         "updatedOn",
-        *, true as "isSingleResult" 
+        true as "isSingleResult" 
     FROM 
         notification."notification" as sn
     WHERE

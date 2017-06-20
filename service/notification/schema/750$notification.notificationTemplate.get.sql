@@ -1,7 +1,9 @@
 CREATE OR REPLACE FUNCTION notification."notificationTemplate.get"(
-    "@notificationTemplateId" INT
+    "@notificationChannelId" INT,
+    "@notificationOperationId" INT,
+    "@notificationTargetId" INT
 ) RETURNS TABLE (
-    "notificationTemplateId" SMALLINT,
+    "notificationTemplateId" INTEGER,
     "name" VARCHAR(25),
     "notificationChannelId" SMALLINT,
     "notificationOperationId" SMALLINT,
@@ -11,6 +13,16 @@ CREATE OR REPLACE FUNCTION notification."notificationTemplate.get"(
 ) AS
 $BODY$
 BEGIN
+    IF "@notificationChannelId" IS NULL THEN
+        RAISE EXCEPTION 'notification.notificationChannelIdMissing';
+    END IF;
+    IF "@notificationOperationId" IS NULL THEN
+        RAISE EXCEPTION 'notification.notificationOperationIdMissing';
+    END IF;
+    IF "@notificationTargetId" IS NULL THEN
+        RAISE EXCEPTION 'notification.notificationTargetIdMissing';
+    END IF;
+
 	RETURN QUERY
     SELECT
         "notificationTemplateId",
@@ -23,7 +35,9 @@ BEGIN
     FROM
         notification."notificationTemplate" AS n
     WHERE
-        n."notificationTemplateId" = "@notificationTemplateId";
+        n."notificationChannelId" = "@notificationChannelId"
+        AND n."notificationOperationId" = "@notificationOperationId"
+        AND n."notificationTargetId" = "@notificationTargetId";
 END
 $BODY$
 LANGUAGE plpgsql;

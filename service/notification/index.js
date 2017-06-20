@@ -50,13 +50,16 @@ module.exports = {
       }
     })
   },
-  // notificationTemplateId, destination, params
+  // notificationChannelId, notificationOperationId, notificationTargetId, destination, params
   'notification.notification.add': function (msg) {
     this.super['notification.notificationTemplate.get']({
-      notificationTemplateId: msg.notificationTemplateId
+      notificationChannelId: msg.notificationChannelId,
+      notificationOperationId: msg.notificationOperationId,
+      notificationTargetId: msg.notificationTargetId
     })
     .then((template) => {
       msg.content = interpolate(template.content, msg.params)
+      msg.notificationTemplateId = template.notificationTemplateId
       return this.super['notification.notification.add'](msg)
     })
   }

@@ -24,3 +24,16 @@ INSERT INTO
   notification."notificationChannel" ("notificationChannelId", "name", "description")
 VALUES
   (1, 'sms', 'sms notification channel')
+ON CONFLICT ("notificationChannelId") DO UPDATE SET
+  "name" = EXCLUDED."name",
+  "description" = EXCLUDED."description";
+
+-- initial test operation
+INSERT INTO
+  notification."notificationOperation" ("notificationOperationId", "name", "description", "params")
+VALUES
+  (1, 'p2p', 'desc for test p2p operation!', '{"amount", "currency"}')
+ON CONFLICT ("notificationOperationId") DO UPDATE SET
+  "name" = EXCLUDED."name",
+  "description" = EXCLUDED."description",
+  "params" = EXCLUDED."params";
