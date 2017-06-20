@@ -1,3 +1,8 @@
+<a name="0.3.20"></a>
+## [0.3.20](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.19...v0.3.20) (2017-06-20)
+
+
+
 <a name="0.3.19"></a>
 ## [0.3.19](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.18...v0.3.19) (2017-06-20)
 
