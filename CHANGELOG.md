@@ -1,3 +1,13 @@
+<a name="0.3.19"></a>
+## [0.3.19](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.18...v0.3.19) (2017-06-20)
+
+
+### Bug Fixes
+
+* update ut-bus and ut-port-httpserver ([2ba844a](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/2ba844a))
+
+
+
 <a name="0.3.18"></a>
 ## [0.3.18](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.17...v0.3.18) (2017-06-14)
 
