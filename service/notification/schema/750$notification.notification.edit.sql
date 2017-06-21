@@ -1,11 +1,11 @@
 CREATE OR REPLACE FUNCTION notification."notification.edit"(
     "@notificationId" BIGINT,
-    "@notificationStatusId" SMALLINT,
+    "@notificationStatusId" INTEGER,
     "@destination" VARCHAR(100),
     "@content" TEXT
 ) RETURNS TABLE(
     "notificationId" BIGINT,
-    "notificationTemplateId" SMALLINT,
+    "notificationTemplateId" INTEGER,
     "notificationStatusId" SMALLINT,
     "destination" VARCHAR(100),
     "content" TEXT,
@@ -17,30 +17,30 @@ CREATE OR REPLACE FUNCTION notification."notification.edit"(
 AS
 $body$
 BEGIN
-	UPDATE notification."notification"
+	UPDATE notification."notification" AS un
     SET
-    	"notificationStatusId" = COALESCE("@notificationStatusId", "notificationStatusId"),
-        "destination" = COALESCE("@destination", "destination"),
-        "content" = COALESCE("@content", "content"),
+    	"notificationStatusId" = COALESCE("@notificationStatusId", un."notificationStatusId"),
+        "destination" = COALESCE("@destination", un."destination"),
+        "content" = COALESCE("@content", un."content"),
         "updatedOn" = now()
     WHERE
-    	"notificationId" = "@notificationId";
+    	un."notificationId" = "@notificationId";
         
     RETURN QUERY
     SELECT
-    	"notificationId",
-        "notificationTemplateId",
-        "notificationStatusId",
-        "destination",
-        "content",
-        "params",
-        "createdOn",
-        "updatedOn",
+    	n."notificationId",
+        n."notificationTemplateId",
+        n."notificationStatusId",
+        n."destination",
+        n."content",
+        n."params",
+        n."createdOn",
+        n."updatedOn",
         true AS "isSingleResult"
     FROM
-    	notification."notification"
+    	notification."notification" AS n
     WHERE
-    	"notificationId" = "@notificationId";
+    	n."notificationId" = "@notificationId";
 END
 $body$
 LANGUAGE plpgsql

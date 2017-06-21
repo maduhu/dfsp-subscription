@@ -1,4 +1,5 @@
 CREATE OR REPLACE FUNCTION notification."notificationTemplate.add"(
+    "@name" VARCHAR(25),
     "@notificationChannelId" INTEGER,
     "@notificationOperationId" INTEGER,
     "@notificationTargetId" INTEGER,
@@ -17,6 +18,16 @@ $BODY$
 DECLARE
     "@notificationTemplateId" INTEGER;
 BEGIN
+    IF "@notificationChannelId" IS NULL THEN
+        RAISE EXCEPTION 'notification.notificationChannelIdMissing';
+    END IF;
+    IF "@notificationOperationId" IS NULL THEN
+        RAISE EXCEPTION 'notification.notificationOperationIdMissing';
+    END IF;
+    IF "@notificationTargetId" IS NULL THEN
+        RAISE EXCEPTION 'notification.notificationTargetIdMissing';
+    END IF;
+    
     WITH n AS (
         INSERT INTO notification."notificationTemplate" (
             "name",

@@ -7,7 +7,7 @@ CREATE TABLE notification."notificationTemplate"
     "notificationTargetId" SMALLINT,
     "content" TEXT,
     CONSTRAINT "pkNotificationNotificationTemplateNotificationTemplateId" PRIMARY KEY ("notificationTemplateId"),
-    CONSTRAINT "ukNotificationNotificationTemplate" UNIQUE ("notificationTemplateId", "notificationChannelId", "notificationOperationId", "notificationTargetId"),
+    CONSTRAINT "ukNotificationNotificationTemplateChannelOperationTarget" UNIQUE ("notificationChannelId", "notificationOperationId", "notificationTargetId"),
     CONSTRAINT "fkNotificationNotificationTemplate_NotificationNotificationChannelId" FOREIGN KEY ("notificationChannelId")
         REFERENCES notification."notificationChannel" ("notificationChannelId") MATCH SIMPLE
         ON UPDATE NO ACTION
