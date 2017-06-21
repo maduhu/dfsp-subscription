@@ -3,7 +3,8 @@ CREATE OR REPLACE FUNCTION notification."notificationOperation.fetch"(
 ) RETURNS TABLE(
     "notificationOperationId" SMALLINT,
     "name" VARCHAR(25),
-    "description" TEXT
+    "description" TEXT,
+    "params" VARCHAR(25)[]
 )
 AS
 $BODY$
@@ -12,7 +13,8 @@ BEGIN
 	SELECT
     	ns."notificationOperationId",
         ns."name",
-        ns."description"
+        ns."description",
+        ns."params"
     FROM
     	notification."notificationOperation" AS ns
     WHERE
