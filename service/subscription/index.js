@@ -1,7 +1,7 @@
 var path = require('path')
 var joi = require('joi')
 var db = null
-// var error = require('./error')
+require('./error')
 module.exports = {
   schema: [{
     path: path.join(__dirname, 'schema'),

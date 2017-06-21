@@ -19,7 +19,7 @@ test({
         return {}
       },
       error: (error, assert) => {
-        assert.equal(error.errorPrint, 'subscription.actorIdMissing', error.errorPrint)
+        assert.equal(error.errorPrint, 'Missing actor id', error.errorPrint)
       }
     },
     {
@@ -31,7 +31,7 @@ test({
         }
       },
       error: (error, assert) => {
-        assert.equal(error.errorPrint, 'subscription.phoneNumberMissing', error.errorPrint)
+        assert.equal(error.errorPrint, 'Missing phone number', error.errorPrint)
       }
     },
     {
