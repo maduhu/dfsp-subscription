@@ -3,7 +3,7 @@ var joi = require('joi')
 var db = null
 // var error = require('./error')
 
-var interpolatePattern = /\{([^}]*)\}/g
+var interpolatePattern = /\$\{([^}]*)\}/g
 
 var interpolate = function (message, params) {
   return message.replace(interpolatePattern, (placeHolder, label) => (params[label]))
@@ -51,8 +51,8 @@ module.exports = {
     })
   },
   // notificationChannelId, notificationOperationId, notificationTargetId, destination, params
-  'notification.notification.add': function (msg) {
-    this.super['notification.notificationTemplate.get']({
+  'add.execute': function (msg) {
+    return this.super['notification.notificationTemplate.get']({
       notificationChannelId: msg.notificationChannelId,
       notificationOperationId: msg.notificationOperationId,
       notificationTargetId: msg.notificationTargetId

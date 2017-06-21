@@ -25,12 +25,12 @@ BEGIN
 
 	RETURN QUERY
     SELECT
-        "notificationTemplateId",
-        "name",
-        "notificationChannelId",
-        "notificationOperationId",
-        "notificationTargetId"
-        "content",
+        n."notificationTemplateId",
+        n."name",
+        n."notificationChannelId",
+        n."notificationOperationId",
+        n."notificationTargetId",
+        n."content",
         true as "isSingleResult"
     FROM
         notification."notificationTemplate" AS n

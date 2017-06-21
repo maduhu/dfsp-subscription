@@ -1,7 +1,7 @@
 CREATE TABLE notification."notification"
 (
   "notificationId" BIGSERIAL NOT NULL,
-  "notificationTemplateId" SMALLINT,
+  "notificationTemplateId" INTEGER,
   "notificationStatusId" SMALLINT,
   "destination" CHARACTER VARYING(100),
   "content" Text,

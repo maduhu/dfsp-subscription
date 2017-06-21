@@ -1,5 +1,5 @@
 CREATE OR REPLACE FUNCTION notification."notification.add"(
-    "@notificationTemplateId" SMALLINT,
+    "@notificationTemplateId" INTEGER,
     "@destination" VARCHAR(100),
     "@content" TEXT,
     "@params" JSONB
@@ -21,13 +21,13 @@ DECLARE
 BEGIN
     WITH
     n as (
-        INSERT INTO subsription."notification" (
-            "notificationTemplateId",  
-            "notificationStatusId",  
-            "destination",  
-            "content",  
-            "params",  
-            "createdOn",  
+        INSERT INTO notification."notification" (
+            "notificationTemplateId",
+            "notificationStatusId",
+            "destination",
+            "content",
+            "params",
+            "createdOn",
             "updatedOn"
         )
         VALUES (
@@ -50,19 +50,19 @@ BEGIN
         
     RETURN QUERY
     SELECT
-        "notificationId",
-        "notificationTemplateId",
-        "notificationStatusId",
-        "destination",
-        "content",
-        "params",
-        "createdOn",
-        "updatedOn",
+        nn."notificationId",
+        nn."notificationTemplateId",
+        nn."notificationStatusId",
+        nn."destination",
+        nn."content",
+        nn."params",
+        nn."createdOn",
+        nn."updatedOn",
         true as "isSingleResult" 
     FROM 
-        notification."notification" as sn
+        notification."notification" as nn
     WHERE
-    	sn."notificationId" = "@notificationId";
+    	nn."notificationId" = "@notificationId";
 END
 $BODY$
 LANGUAGE plpgsql;

@@ -63,5 +63,53 @@ module.exports = {
     auth: false,
     params: joi.any(),
     result: joi.any()
+  },
+  'notificationTemplate.get': {
+    // tags: ['tag1', 'tag2'],
+    description: '',
+    notes: '',
+    auth: false,
+    params: joi.any(),
+    result: joi.any()
+  },
+  'notificationTemplate.fetch': {
+    // tags: ['tag1', 'tag2'],
+    description: '',
+    notes: '',
+    auth: false,
+    params: joi.any(),
+    result: joi.any()
+  },
+  'notificationTemplate.add': {
+    // tags: ['tag1', 'tag2'],
+    description: '',
+    notes: '',
+    auth: false,
+    params: joi.any(),
+    result: joi.any()
+  },
+  'add.execute': {
+    // tags: ['tag1', 'tag2'],
+    description: '',
+    notes: '',
+    auth: false,
+    params: joi.any(),
+    result: joi.any()
+  },
+  'notification.fetch': {
+    // tags: ['tag1', 'tag2'],
+    description: '',
+    notes: '',
+    auth: false,
+    params: joi.any(),
+    result: joi.any()
+  },
+  'notification.edit': {
+    // tags: ['tag1', 'tag2'],
+    description: '',
+    notes: '',
+    auth: false,
+    params: joi.any(),
+    result: joi.any()
   }
 }
