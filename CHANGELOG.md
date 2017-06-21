@@ -1,3 +1,13 @@
+<a name="0.3.21"></a>
+## [0.3.21](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.20...v0.3.21) (2017-06-21)
+
+
+### Bug Fixes
+
+* add missing errors for the integration tests ([3651883](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/3651883))
+
+
+
 <a name="0.3.20"></a>
 ## [0.3.20](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.19...v0.3.20) (2017-06-20)
 
