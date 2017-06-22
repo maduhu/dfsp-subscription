@@ -50,7 +50,7 @@ module.exports = {
       }
     })
   },
-  // notificationChannelId, notificationOperationId, notificationTargetId, destination, params
+  // notificationChannelId, notificationOperationId, notificationTargetId, actorId, destinations, params
   'add.execute': function (msg) {
     return this.super['notification.notificationTemplate.get']({
       notificationChannelId: msg.notificationChannelId,

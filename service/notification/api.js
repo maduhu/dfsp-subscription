@@ -187,19 +187,12 @@ module.exports = {
       notificationChannelId: joi.number().required(),
       notificationOperationId: joi.number().required(),
       notificationTargetId: joi.number().required(),
-      destination: joi.string(),
+      actorId: joi.string(),
+      destinations: joi.array().items(joi.string()),
       params: joi.object()
     }),
     result: joi.object().keys({
-      notificationId: joi.number(),
-      notificationTemplateId: joi.number(),
-      notificationStatusId: joi.number(),
-      destination: joi.string(),
-      content: joi.string(),
-      params: joi.object(),
-      createdOn: joi.date(),
-      updatedOn: joi.date(),
-      isSingleResult: joi.boolean()
+      addedRecords: joi.number()
     })
   },
   'notification.fetch': {

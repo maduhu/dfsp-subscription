@@ -3,7 +3,7 @@ CREATE TABLE notification."notification"
   "notificationId" BIGSERIAL NOT NULL,
   "notificationTemplateId" INTEGER,
   "notificationStatusId" SMALLINT,
-  "destination" CHARACTER VARYING(100),
+  "destination" CHARACTER VARYING(25),
   "content" Text,
   "params" jsonb,
   "createdOn" TIMESTAMP WITHOUT TIME ZONE,

@@ -1,13 +1,13 @@
 CREATE OR REPLACE FUNCTION notification."notification.edit"(
     "@notificationId" BIGINT,
     "@notificationStatusId" INTEGER,
-    "@destination" VARCHAR(100),
+    "@destination" VARCHAR(25),
     "@content" TEXT
 ) RETURNS TABLE(
     "notificationId" BIGINT,
     "notificationTemplateId" INTEGER,
     "notificationStatusId" SMALLINT,
-    "destination" VARCHAR(100),
+    "destination" VARCHAR(25),
     "content" TEXT,
     "params" JSONB,
     "createdOn" TIMESTAMP WITHOUT TIME ZONE,

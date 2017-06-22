@@ -2,7 +2,7 @@ CREATE OR REPLACE FUNCTION notification."notification.fetch"(
     "@notificationId" INT = NULL, 
     "@notificationTemplateId" INT = NULL,
     "@notificationStatusId" INT = NULL,
-    "@destination" VARCHAR(100) = NULL,
+    "@destination" VARCHAR(25) = NULL,
     "@from" TIMESTAMP = NULL,
     "@to" TIMESTAMP = NULL,
     "@pageSize" INTEGER = 25,
