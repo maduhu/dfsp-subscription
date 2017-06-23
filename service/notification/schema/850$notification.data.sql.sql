@@ -45,3 +45,29 @@ ON CONFLICT ("notificationOperationId") DO UPDATE SET
   "name" = EXCLUDED."name",
   "description" = EXCLUDED."description",
   "params" = EXCLUDED."params";
+
+-- initial test templates
+INSERT INTO
+  notification."notificationTemplate" ("notificationTemplateId", "name", "notificationChannelId", "notificationOperationId", "notificationTargetId", "content")
+VALUES
+  (1, 'p2p send', 1, 1, 1, 'You have sent ${amount} ${currency}'),
+  (2, 'p2p receive', 1, 1, 2, 'You have received ${amount} ${currency}'),
+  (3, 'invoice send', 1, 2, 1, 'You have sent invoice payment for ${amount} ${currency}'),
+  (4, 'invoice receive', 1, 2, 2, 'You have received invoice payment for ${amount} ${currency}'),
+  (5, 'cash in', 1, 3, 1, 'You have sent cash in for ${amount} ${currency}'),
+  (6, 'cash in', 1, 3, 2, 'You have received cash in for ${amount} ${currency}'),
+  (7, 'cash out', 1, 4, 1, 'You have sent cash out request for ${amount} ${currency}'),
+  (8, 'cash out', 1, 4, 2, 'You have received cash out request for ${amount} ${currency}'),
+  (9, 'bulk payment', 1, 5, 1, 'You have sent payment for ${amount} ${currency}'),
+  (10, 'bulk payment', 1, 5, 2, 'You have received payment for ${amount} ${currency}'),
+  (11, 'invoice cancel', 1, 6, 1, 'Your invoice to ${identifier} has been cancelled'),
+  (12, 'invoice cancel', 1, 6, 2, 'Your invoice to ${identifier} has been cancelled'),
+  (13, 'add account holder', 1, 7, 2, 'You have been added as account holder to ${accountNumber}'),
+  (14, 'remove account holder', 1, 8, 2, 'You have been removed as account holder from ${accountNumber}'),
+  (15, 'account create', 1, 9, 1, 'You created new account')
+ON CONFLICT ("notificationTemplateId") DO UPDATE SET
+  "name" = EXCLUDED."name",
+  "notificationChannelId" = EXCLUDED."notificationChannelId",
+  "notificationOperationId" = EXCLUDED."notificationOperationId",
+  "notificationTargetId" = EXCLUDED."notificationTargetId",
+  "content" = EXCLUDED."content";

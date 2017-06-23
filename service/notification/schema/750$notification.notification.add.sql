@@ -5,7 +5,8 @@ CREATE OR REPLACE FUNCTION notification."notification.add"(
     "@content" TEXT,
     "@params" JSONB
 ) RETURNS TABLE (
-    "addedRecords" BIGINT
+    "addedRecords" BIGINT,
+    "isSingleResult" BOOLEAN
 )
 AS
 $BODY$
@@ -18,7 +19,7 @@ BEGIN
     ON COMMIT DROP;
     
     IF "@destinations" IS NULL THEN
-        INSERT INTO "phoneNumbers" SELECT "phoneNumber" FROM subscription."subscription.fetch"("@actorId");
+        INSERT INTO "phoneNumbers" SELECT "phoneNumber" FROM subscription."subscription.fetch"("@actorId", null);
     ELSE
         INSERT INTO "phoneNumbers" SELECT unnest("@destinations") as "phoneNumber";
     END IF;
@@ -44,7 +45,10 @@ BEGIN
         "phoneNumbers" AS ph;
 
 	RETURN QUERY
-    SELECT COUNT(*) FROM "phoneNumbers";
+    SELECT
+        COUNT(*) AS "addedRecords",
+        true AS "isSingleResult"
+    FROM "phoneNumbers";
 END
 $BODY$
 LANGUAGE plpgsql;
