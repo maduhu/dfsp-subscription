@@ -6,9 +6,11 @@ module.exports = {
   ],
   modules: {
     identity: require('../service/identity'),
-    subscription: require('../service/subscription')
+    subscription: require('../service/subscription'),
+    notification: require('../service/notification')
   },
   validations: {
-    subscription: require('../service/subscription/api')
+    subscription: require('../service/subscription/api'),
+    notification: require('../service/notification/api')
   }
 }
