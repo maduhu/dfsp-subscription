@@ -1,3 +1,22 @@
+<a name="0.4.0"></a>
+# [0.4.0](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.21...v0.4.0) (2017-06-26)
+
+
+### Bug Fixes
+
+* add more notification operations ([b35a05c](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/b35a05c))
+* add sample templates ([cbbabde](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/cbbabde))
+* add tests for notifications ([90f587a](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/90f587a))
+* lint ([c94e60a](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/c94e60a))
+* rename norification schema tables and function ([338377b](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/338377b))
+
+
+### Features
+
+* Sms notification initial commit ([74b09d0](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/74b09d0))
+
+
+
 <a name="0.3.21"></a>
 ## [0.3.21](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.3.20...v0.3.21) (2017-06-21)
 
