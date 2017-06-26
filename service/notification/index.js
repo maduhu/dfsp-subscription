@@ -50,16 +50,16 @@ module.exports = {
       }
     })
   },
-  // notificationChannelId, notificationOperationId, notificationTargetId, actorId, destinations, params
+  // channelId, operationId, targetId, actorId, destinations, params
   'add.execute': function (msg) {
-    return this.super['notification.notificationTemplate.get']({
-      notificationChannelId: msg.notificationChannelId,
-      notificationOperationId: msg.notificationOperationId,
-      notificationTargetId: msg.notificationTargetId
+    return this.super['notification.template.get']({
+      channelId: msg.channelId,
+      operationId: msg.operationId,
+      targetId: msg.targetId
     })
     .then((template) => {
       msg.content = interpolate(template.content, msg.params)
-      msg.notificationTemplateId = template.notificationTemplateId
+      msg.templateId = template.templateId
       return this.super['notification.notification.add'](msg)
     })
   }

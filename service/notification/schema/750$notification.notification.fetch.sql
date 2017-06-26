@@ -1,7 +1,7 @@
 CREATE OR REPLACE FUNCTION notification."notification.fetch"(
     "@notificationId" INT = NULL, 
-    "@notificationTemplateId" INT = NULL,
-    "@notificationStatusId" INT = NULL,
+    "@templateId" INT = NULL,
+    "@statusId" INT = NULL,
     "@destination" VARCHAR(25) = NULL,
     "@from" TIMESTAMP = NULL,
     "@to" TIMESTAMP = NULL,
@@ -23,8 +23,8 @@ BEGIN
     with a AS (
         SELECT
             n."notificationId",
-            n."notificationTemplateId",
-            n."notificationStatusId",
+            n."templateId",
+            n."statusId",
             n."destination",
             n."content",
             n."params",
@@ -35,9 +35,9 @@ BEGIN
         WHERE
             ("@notificationId" IS NULL OR n."notificationId" = "@notificationId")
             AND
-            ("@notificationTemplateId" IS NULL OR n."notificationTemplateId" = "@notificationTemplateId")
+            ("@templateId" IS NULL OR n."templateId" = "@templateId")
             AND
-            ("@notificationStatusId" IS NULL OR n."notificationStatusId" = "@notificationStatusId")
+            ("@statusId" IS NULL OR n."statusId" = "@statusId")
             AND
             ("@destination" IS NULL OR n."destination" = "@destination")
             AND

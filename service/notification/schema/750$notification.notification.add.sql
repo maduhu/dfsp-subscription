@@ -1,5 +1,5 @@
 CREATE OR REPLACE FUNCTION notification."notification.add"(
-    "@notificationTemplateId" INTEGER,
+    "@templateId" INTEGER,
     "@actorId" VARCHAR(25),
     "@destinations" VARCHAR(25)[],
     "@content" TEXT,
@@ -13,7 +13,7 @@ $BODY$
 DECLARE
     "@notificationId" BIGINT;
 BEGIN
-	CREATE TEMP TABLE "phoneNumbers" (
+    CREATE TEMP TABLE "phoneNumbers" (
         "phoneNumber" VARCHAR(25)
     )
     ON COMMIT DROP;
@@ -25,8 +25,8 @@ BEGIN
     END IF;
     
     INSERT INTO notification."notification" (
-            "notificationTemplateId",
-            "notificationStatusId",
+            "templateId",
+            "statusId",
             "destination",
             "content",
             "params",
@@ -34,8 +34,8 @@ BEGIN
             "updatedOn"
         )
     SELECT 
-        "@notificationTemplateId",
-        (SELECT s."notificationStatusId" FROM notification."notificationStatus" AS s WHERE lower(s."name") = 'pending'),
+        "@templateId",
+        (SELECT s."statusId" FROM notification."status" AS s WHERE lower(s."name") = 'pending'),
         ph."phoneNumber",
         "@content",
         "@params",

@@ -12,15 +12,15 @@ test({
   steps: function (test, bus, run) {
     return run(test, bus, [{
       name: 'Fetch notification operations',
-      method: 'notification.notificationOperation.fetch',
+      method: 'notification.operation.fetch',
       params: (context) => {
         return {
-          notificationOperationId: 1
+          operationId: 1
         }
       },
       result: (result, assert) => {
         assert.equals(joi.validate(result, joi.array().items({
-          notificationOperationId: joi.number(),
+          operationId: joi.number(),
           name: joi.string(),
           description: joi.string(),
           params: joi.array()
@@ -29,15 +29,15 @@ test({
     },
     {
       name: 'Get notification operations',
-      method: 'notification.notificationOperation.get',
+      method: 'notification.operation.get',
       params: (context) => {
         return {
-          notificationOperationId: 1
+          operationId: 1
         }
       },
       result: (result, assert) => {
         assert.equals(joi.validate(result, joi.object().keys({
-          notificationOperationId: joi.number(),
+          operationId: joi.number(),
           name: joi.string(),
           description: joi.string(),
           params: joi.array()

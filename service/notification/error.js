@@ -13,19 +13,19 @@ module.exports = {
     },
     {
       id: 'notificationChannelIdMissingError',
-      type: 'notification.notificationChannelIdMissing',
+      type: 'notification.channelIdMissing',
       message: 'Missing notificationChannel id',
       statusCode: 422
     },
     {
       id: 'notificationOperationIdMissingError',
-      type: 'notification.notificationOperationIdMissing',
+      type: 'notification.operationIdMissing',
       message: 'Missing notificationOperation id',
       statusCode: 422
     },
     {
       id: 'notificationTargetIdMissingError',
-      type: 'notification.notificationTargetIdMissing',
+      type: 'notification.targetIdMissing',
       message: 'Missing notificationTarget id',
       statusCode: 422
     }

@@ -12,15 +12,15 @@ test({
   steps: function (test, bus, run) {
     return run(test, bus, [{
       name: 'Fetch notification channels',
-      method: 'notification.notificationChannel.fetch',
+      method: 'notification.channel.fetch',
       params: (context) => {
         return {
-          notificationChannelId: 1
+          channelId: 1
         }
       },
       result: (result, assert) => {
         assert.equals(joi.validate(result, joi.array().items({
-          notificationChannelId: joi.number(),
+          channelId: joi.number(),
           name: joi.string(),
           description: joi.string()
         }).required()).error, null, 'Check fetched notification channels')
@@ -28,15 +28,15 @@ test({
     },
     {
       name: 'Get notification channel',
-      method: 'notification.notificationChannel.get',
+      method: 'notification.channel.get',
       params: (context) => {
         return {
-          notificationChannelId: 1
+          channelId: 1
         }
       },
       result: (result, assert) => {
         assert.equals(joi.validate(result, joi.object().keys({
-          notificationChannelId: joi.number(),
+          channelId: joi.number(),
           name: joi.string(),
           description: joi.string()
         }).required()).error, null, 'Check gathered notification channel')

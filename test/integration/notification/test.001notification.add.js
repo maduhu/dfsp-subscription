@@ -16,17 +16,17 @@ test({
   steps: function (test, bus, run) {
     return run(test, bus, [{
       name: 'Create temple if there is not',
-      method: 'notification.notificationTemplate.fetch',
+      method: 'notification.template.fetch',
       params: (context) => {
         return {}
       },
       result: (result, assert) => {
         if (result.pagination.recordsTotal < 1) {
-          bus.importMethod('notification.notificationTemplate.add')({
+          bus.importMethod('notification.template.add')({
             name: 'Test 101',
-            notificationChannelId: 1,
-            notificationOperationId: 1,
-            notificationTargetId: 1,
+            channelId: 1,
+            operationId: 1,
+            targetId: 1,
             content: TEMPLATECONTENT
           })
         }
@@ -37,9 +37,9 @@ test({
       method: 'notification.add.execute',
       params: (context) => {
         return {
-          notificationChannelId: 1,
-          notificationOperationId: 1,
-          notificationTargetId: 1,
+          channelId: 1,
+          operationId: 1,
+          targetId: 1,
           destinations: DESTINATIONS,
           params: '{"amount": 5, "currency": "USD"}'
         }
@@ -53,7 +53,7 @@ test({
       method: 'notification.notification.fetch',
       params: (context) => {
         return {
-          notificationTemplateId: 1
+          templateId: 1
         }
       },
       result: (result, assert) => {
@@ -63,8 +63,8 @@ test({
             createdOn: joi.string(),
             destination: joi.string(),
             notificationId: joi.number(),
-            notificationStatusId: joi.number(),
-            notificationTemplateId: joi.number(),
+            statusId: joi.number(),
+            templateId: joi.number(),
             params: joi.object().keys({
               amount: joi.number(),
               currency: joi.string()
@@ -86,7 +86,7 @@ test({
       params: (context) => {
         return {
           notificationId: context['Fetch notification'].data[0].notificationId,
-          notificationStatusId: 2
+          statusId: 2
         }
       },
       result: (result, assert) => {
@@ -95,8 +95,8 @@ test({
           createdOn: joi.string(),
           destination: joi.string(),
           notificationId: joi.string(),
-          notificationStatusId: joi.number().valid(2),
-          notificationTemplateId: joi.number(),
+          statusId: joi.number().valid(2),
+          templateId: joi.number(),
           params: joi.object().keys({
             amount: joi.number(),
             currency: joi.string()

@@ -1,7 +1,7 @@
-CREATE OR REPLACE FUNCTION notification."notificationOperation.get"(
-    "@notificationOperationId" INT
+CREATE OR REPLACE FUNCTION notification."operation.get"(
+    "@operationId" INT
 ) RETURNS TABLE (
-    "notificationOperationId" SMALLINT,
+    "operationId" SMALLINT,
     "name" CHARACTER VARYING(25),
     "description" TEXT,
     "params" VARCHAR(25)[],
@@ -9,14 +9,14 @@ CREATE OR REPLACE FUNCTION notification."notificationOperation.get"(
 )AS
 $body$
     SELECT
-        no."notificationOperationId" AS "notificationOperationId",
+        no."operationId" AS "operationId",
         no."name" AS "name",
         no."description" AS "description",
         no."params" AS "params",
         true AS "isSingleResult"
     FROM
-        notification."notificationOperation" AS no
+        notification."operation" AS no
     WHERE
-        no."notificationOperationId" = "@notificationOperationId"
+        no."operationId" = "@operationId"
 $body$
 LANGUAGE SQL

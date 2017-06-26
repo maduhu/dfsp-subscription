@@ -12,15 +12,15 @@ test({
   steps: function (test, bus, run) {
     return run(test, bus, [{
       name: 'Fetch notification targerts',
-      method: 'notification.notificationTarget.fetch',
+      method: 'notification.target.fetch',
       params: (context) => {
         return {
-          notificationTargetId: 1
+          targetId: 1
         }
       },
       result: (result, assert) => {
         assert.equals(joi.validate(result, joi.array().items({
-          notificationTargetId: joi.number(),
+          targetId: joi.number(),
           name: joi.string(),
           description: joi.string()
         }).required()).error, null, 'Check fetched notification targets')
@@ -28,15 +28,15 @@ test({
     },
     {
       name: 'Get notification status',
-      method: 'notification.notificationTarget.get',
+      method: 'notification.target.get',
       params: (context) => {
         return {
-          notificationTargetId: 1
+          targetId: 1
         }
       },
       result: (result, assert) => {
         assert.equals(joi.validate(result, joi.object().keys({
-          notificationTargetId: joi.number(),
+          targetId: joi.number(),
           name: joi.string(),
           description: joi.string()
         }).required()).error, null, 'Check gathered notification target')

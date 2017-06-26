@@ -12,10 +12,10 @@ test({
   steps: function (test, bus, run) {
     return run(test, bus, [{
       name: 'Fetch notification templates',
-      method: 'notification.notificationTemplate.fetch',
+      method: 'notification.template.fetch',
       params: (context) => {
         return {
-          notificationTemplateId: 1
+          templateId: 1
         }
       },
       result: (result, assert) => {
@@ -32,21 +32,21 @@ test({
     },
     {
       name: 'Get notification template',
-      method: 'notification.notificationTemplate.get',
+      method: 'notification.template.get',
       params: (context) => {
         return {
-          notificationChannelId: 1,
-          notificationOperationId: 1,
-          notificationTargetId: 1
+          channelId: 1,
+          operationId: 1,
+          targetId: 1
         }
       },
       result: (result, assert) => {
         assert.equals(joi.validate(result, joi.object().keys({
-          notificationTemplateId: joi.number(),
+          templateId: joi.number(),
           name: joi.string(),
-          notificationChannelId: joi.number(),
-          notificationOperationId: joi.number(),
-          notificationTargetId: joi.number(),
+          channelId: joi.number(),
+          operationId: joi.number(),
+          targetId: joi.number(),
           content: joi.string()
         }).required()).error, null, 'Check gathered notification templates')
       }

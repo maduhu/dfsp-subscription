@@ -1,180 +1,180 @@
 var joi = require('joi')
 module.exports = {
-  'notificationStatus.get': {
+  'status.get': {
     description: '',
     notes: '',
     auth: false,
     params: joi.object().keys({
-      notificationStatusId: joi.number().required()
+      statusId: joi.number().required()
     }),
     result: joi.object().keys({
-      notificationStatusId: joi.number(),
+      statusId: joi.number(),
       name: joi.string(),
       description: joi.string(),
       isSingleResult: joi.boolean()
     })
   },
-  'notificationStatus.fetch': {
+  'status.fetch': {
     description: '',
     notes: '',
     auth: false,
     params: joi.object().keys({
-      notificationStatusId: joi.number()
+      statusId: joi.number()
     }),
     result: joi.array().items(
       joi.object({
-        notificationStatusId: joi.number(),
+        statusId: joi.number(),
         name: joi.string(),
         description: joi.string()
       }).allow(null)
     )
   },
-  'notificationTarget.fetch': {
+  'target.fetch': {
     description: '',
     notes: '',
     auth: false,
     params: joi.object().keys({
-      notificationTargetId: joi.number()
+      targetId: joi.number()
     }),
     result: joi.array().items(
       joi.object({
-        notificationTargetId: joi.number(),
+        targetId: joi.number(),
         name: joi.string(),
         description: joi.string()
       }).allow(null)
     )
   },
-  'notificationTarget.get': {
+  'target.get': {
     description: '',
     notes: '',
     auth: false,
     params: joi.object().keys({
-      notificationTargetId: joi.number().required()
+      targetId: joi.number().required()
     }),
     result: joi.object().keys({
-      notificationTargetId: joi.number(),
+      targetId: joi.number(),
       name: joi.string(),
       description: joi.string()
     })
   },
-  'notificationOperation.fetch': {
+  'operation.fetch': {
     description: '',
     notes: '',
     auth: false,
     params: joi.object().keys({
-      notificationOperationId: joi.number()
+      operationId: joi.number()
     }),
     result: joi.array().items(
       joi.object({
-        notificationOperationId: joi.number(),
+        operationId: joi.number(),
         name: joi.string(),
         description: joi.string(),
         params: joi.array().items(joi.string())
       }).allow(null)
     )
   },
-  'notificationOperation.get': {
+  'operation.get': {
     description: '',
     notes: '',
     auth: false,
     params: joi.object().keys({
-      notificationOperationId: joi.number().required()
+      operationId: joi.number().required()
     }),
     result: joi.object().keys({
-      notificationOperationId: joi.number(),
+      operationId: joi.number(),
       name: joi.string(),
       description: joi.string(),
       params: joi.array().items(joi.string())
     })
   },
-  'notificationChannel.fetch': {
+  'channel.fetch': {
     description: '',
     notes: '',
     auth: false,
     params: joi.object().keys({
-      notificationChannelId: joi.number()
+      channelId: joi.number()
     }),
     result: joi.array().items(
       joi.object({
-        notificationChannelId: joi.number(),
+        channelId: joi.number(),
         name: joi.string(),
         description: joi.string()
       }).allow(null)
     )
   },
-  'notificationChannel.get': {
+  'channel.get': {
     description: '',
     notes: '',
     auth: false,
     params: joi.object().keys({
-      notificationChannelId: joi.number().required()
+      channelId: joi.number().required()
     }),
     result: joi.object().keys({
-      notificationChannelId: joi.number(),
+      channelId: joi.number(),
       name: joi.string(),
       description: joi.string(),
       isSingleResult: joi.boolean()
     })
   },
-  'notificationTemplate.get': {
+  'template.get': {
     description: '',
     notes: '',
     auth: false,
     params: joi.object().keys({
-      notificationChannelId: joi.number().required(),
-      notificationOperationId: joi.number().required(),
-      notificationTargetId: joi.number().required()
+      channelId: joi.number().required(),
+      operationId: joi.number().required(),
+      targetId: joi.number().required()
     }),
     result: joi.object().keys({
-      notificationTemplateId: joi.number(),
+      templateId: joi.number(),
       name: joi.string(),
-      notificationChannelId: joi.number(),
-      notificationOperationId: joi.number(),
-      notificationTargetId: joi.number(),
+      channelId: joi.number(),
+      operationId: joi.number(),
+      targetId: joi.number(),
       content: joi.string(),
       isSingleResult: joi.boolean()
     })
   },
-  'notificationTemplate.fetch': {
+  'template.fetch': {
     description: '',
     notes: '',
     auth: false,
     params: joi.object().keys({
-      notificationTemplateId: joi.number(),
-      notificationChannelId: joi.number(),
-      notificationOperationId: joi.number(),
-      notificationTargetId: joi.number(),
+      templateId: joi.number(),
+      channelId: joi.number(),
+      operationId: joi.number(),
+      targetId: joi.number(),
       pageSize: joi.number(),
       pageNumber: joi.number()
     }),
     result: joi.array().items(
       joi.object({
-        notificationTemplateId: joi.number(),
+        templateId: joi.number(),
         name: joi.string(),
-        notificationChannelId: joi.number(),
-        notificationOperationId: joi.number(),
-        notificationTargetId: joi.number(),
+        channelId: joi.number(),
+        operationId: joi.number(),
+        targetId: joi.number(),
         content: joi.string()
       })
     ).allow(null)
   },
-  'notificationTemplate.add': {
+  'template.add': {
     description: '',
     notes: '',
     auth: false,
     params: joi.object().keys({
       name: joi.string(),
-      notificationChannelId: joi.number().required(),
-      notificationOperationId: joi.number().required(),
-      notificationTargetId: joi.number().required(),
+      channelId: joi.number().required(),
+      operationId: joi.number().required(),
+      targetId: joi.number().required(),
       content: joi.string()
     }),
     result: joi.object().keys({
-      notificationTemplateId: joi.number(),
+      templateId: joi.number(),
       name: joi.string(),
-      notificationChannelId: joi.number(),
-      notificationOperationId: joi.number(),
-      notificationTargetId: joi.number(),
+      channelId: joi.number(),
+      operationId: joi.number(),
+      targetId: joi.number(),
       content: joi.string(),
       isSingleResult: joi.boolean()
     })
@@ -184,9 +184,9 @@ module.exports = {
     notes: '',
     auth: false,
     params: joi.object().keys({
-      notificationChannelId: joi.number().required(),
-      notificationOperationId: joi.number().required(),
-      notificationTargetId: joi.number().required(),
+      channelId: joi.number().required(),
+      operationId: joi.number().required(),
+      targetId: joi.number().required(),
       actorId: joi.string(),
       destinations: joi.array().items(joi.string()),
       params: joi.object()
@@ -201,8 +201,8 @@ module.exports = {
     auth: false,
     params: joi.object().keys({
       notificationId: joi.number(),
-      notificationTemplateId: joi.number(),
-      notificationStatusId: joi.number(),
+      templateId: joi.number(),
+      statusId: joi.number(),
       destination: joi.string(),
       from: joi.date(),
       to: joi.date(),
@@ -221,14 +221,14 @@ module.exports = {
     auth: false,
     params: joi.object().keys({
       notificationId: joi.number(),
-      notificationStatusId: joi.number(),
+      statusId: joi.number(),
       destination: joi.string(),
       content: joi.string()
     }),
     result: joi.object().keys({
       notificationId: joi.number(),
-      notificationTemplateId: joi.number(),
-      notificationStatusId: joi.number(),
+      templateId: joi.number(),
+      statusId: joi.number(),
       destination: joi.string(),
       content: joi.string(),
       params: joi.object(),

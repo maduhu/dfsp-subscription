@@ -1,12 +1,12 @@
 CREATE OR REPLACE FUNCTION notification."notification.edit"(
     "@notificationId" BIGINT,
-    "@notificationStatusId" INTEGER,
+    "@statusId" INTEGER,
     "@destination" VARCHAR(25),
     "@content" TEXT
 ) RETURNS TABLE(
     "notificationId" BIGINT,
-    "notificationTemplateId" INTEGER,
-    "notificationStatusId" SMALLINT,
+    "templateId" INTEGER,
+    "statusId" SMALLINT,
     "destination" VARCHAR(25),
     "content" TEXT,
     "params" JSONB,
@@ -19,7 +19,7 @@ $body$
 BEGIN
 	UPDATE notification."notification" AS un
     SET
-    	"notificationStatusId" = COALESCE("@notificationStatusId", un."notificationStatusId"),
+        "statusId" = COALESCE("@statusId", un."statusId"),
         "destination" = COALESCE("@destination", un."destination"),
         "content" = COALESCE("@content", un."content"),
         "updatedOn" = now()
@@ -29,8 +29,8 @@ BEGIN
     RETURN QUERY
     SELECT
     	n."notificationId",
-        n."notificationTemplateId",
-        n."notificationStatusId",
+        n."templateId",
+        n."statusId",
         n."destination",
         n."content",
         n."params",
