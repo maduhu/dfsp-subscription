@@ -1,3 +1,13 @@
+<a name="0.4.2"></a>
+## [0.4.2](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.4.1...v0.4.2) (2017-06-28)
+
+
+### Bug Fixes
+
+* change transferId to paymentId ([92f67ef](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/92f67ef))
+
+
+
 <a name="0.4.1"></a>
 ## [0.4.1](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.4.0...v0.4.1) (2017-06-28)
 

@@ -1,6 +1,6 @@
 {
   "name": "@leveloneproject/dfsp-subscription",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "DFSP Subscription service",
   "main": "index.js",
   "scripts": {
