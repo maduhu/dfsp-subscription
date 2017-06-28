@@ -32,7 +32,7 @@ ON CONFLICT ("channelId") DO UPDATE SET
 INSERT INTO
   notification."operation" ("operationId", "name", "description", "params")
 VALUES
-  (1, 'p2p', 'desc for test p2p operation!', '{"transferId", "receiver", "sourceAccount", "destinationAmount", "sourceIdentifier"}'),
+  (1, 'p2p', 'desc for test p2p operation!', '{"paymentId", "receiver", "sourceAccount", "destinationAmount", "sourceIdentifier"}'),
   (2, 'invoice', 'desc for test invoce operation!', '{"amount", "currency"}'),
   (3, 'cashIn', 'desc for test cashIn operation!', '{"amount", "currency"}'),
   (4, 'cashOut', 'desc for test cashOut operation!', '{"amount", "currency"}'),
