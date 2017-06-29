@@ -1,11 +1,7 @@
 var create = require('ut-error').define
-var Notification = create('notification')
 var defaultErrorCode = 400
 
 module.exports = {
-  notification: function (cause) {
-    return new Notification(cause)
-  },
   error: [
     {
       type: 'notification',
