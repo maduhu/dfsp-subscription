@@ -1,3 +1,13 @@
+<a name="0.4.3"></a>
+## [0.4.3](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.4.2...v0.4.3) (2017-06-29)
+
+
+### Bug Fixes
+
+* remove not used code ([18305f5](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/18305f5))
+
+
+
 <a name="0.4.2"></a>
 ## [0.4.2](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.4.1...v0.4.2) (2017-06-28)
 
