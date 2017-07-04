@@ -2,6 +2,8 @@ var test = require('ut-run/test')
 var config = require('../../lib/appConfig')
 var joi = require('joi')
 
+const EDITED_CONTENT = 'Edited notification template'
+
 test({
   type: 'integration',
   name: 'Notification template',
@@ -49,6 +51,27 @@ test({
           targetId: joi.number(),
           content: joi.string()
         }).required()).error, null, 'Check gathered notification templates')
+      }
+    },
+    {
+      name: 'Edit notification template',
+      method: 'notification.template.edit',
+      params: (context) => {
+        return {
+          templateId: 1,
+          content: EDITED_CONTENT
+        }
+      },
+      result: (result, assert) => {
+        assert.equals(joi.validate(result, joi.object().keys({
+          templateId: joi.number(),
+          name: joi.string(),
+          channelId: joi.number(),
+          operationId: joi.number(),
+          targetId: joi.number(),
+          content: joi.string()
+        }).required()).error, null, 'Check editted notification template')
+        assert.equals(result.content, EDITED_CONTENT, 'Content was not edited!')
       }
     }
     ])

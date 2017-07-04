@@ -8,21 +8,27 @@ module.exports = {
       message: 'notification error'
     },
     {
+      id: 'notificationTemplateIdMissingError',
+      type: 'notification.templateIdMissing',
+      message: 'Missing templateId',
+      statusCode: 422
+    },
+    {
       id: 'notificationChannelIdMissingError',
       type: 'notification.channelIdMissing',
-      message: 'Missing notificationChannel id',
+      message: 'Missing channelId',
       statusCode: 422
     },
     {
       id: 'notificationOperationIdMissingError',
       type: 'notification.operationIdMissing',
-      message: 'Missing notificationOperation id',
+      message: 'Missing operationId',
       statusCode: 422
     },
     {
       id: 'notificationTargetIdMissingError',
       type: 'notification.targetIdMissing',
-      message: 'Missing notificationTarget id',
+      message: 'Missing targetId',
       statusCode: 422
     }
   ].reduce((exporting, error) => {
