@@ -179,6 +179,28 @@ module.exports = {
       isSingleResult: joi.boolean()
     })
   },
+  'template.edit': {
+    description: '',
+    notes: '',
+    auth: false,
+    params: joi.object().keys({
+      templateId: joi.number().required(),
+      name: joi.string(),
+      channelId: joi.number(),
+      operationId: joi.number(),
+      targetId: joi.number(),
+      content: joi.string()
+    }),
+    result: joi.object().keys({
+      templateId: joi.number(),
+      name: joi.string(),
+      channelId: joi.number(),
+      operationId: joi.number(),
+      targetId: joi.number(),
+      content: joi.string(),
+      isSingleResult: joi.boolean()
+    })
+  },
   'add.execute': {
     description: '',
     notes: '',
