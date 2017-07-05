@@ -1,3 +1,13 @@
+<a name="0.4.4"></a>
+## [0.4.4](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.4.3...v0.4.4) (2017-07-05)
+
+
+### Bug Fixes
+
+* Add edit function for notification template ([3f30aba](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/3f30aba))
+
+
+
 <a name="0.4.3"></a>
 ## [0.4.3](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.4.2...v0.4.3) (2017-06-29)
 
