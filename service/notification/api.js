@@ -192,6 +192,7 @@ module.exports = {
     notes: '',
     auth: false,
     params: joi.object().keys({
+      actorId: joi.number().example('1000'),
       templateId: joi.number().required(),
       name: joi.string(),
       channelId: joi.number(),
