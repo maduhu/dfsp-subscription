@@ -25,6 +25,7 @@ BEGIN
             n."notificationId",
             n."templateId",
             n."statusId",
+            stat."name" as "statusName",
             n."destination",
             n."content",
             n."params",
@@ -32,6 +33,10 @@ BEGIN
             n."updatedOn"
         FROM
             notification."notification" AS n
+        JOIN
+            notification."status" AS stat 
+        ON
+            stat."statusId" = n."statusId"
         WHERE
             ("@notificationId" IS NULL OR n."notificationId" = "@notificationId")
             AND

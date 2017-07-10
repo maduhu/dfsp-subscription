@@ -5,6 +5,7 @@ module.exports = {
     notes: '',
     auth: false,
     params: joi.object().keys({
+      actorId: joi.number().example('1000'),
       statusId: joi.number().required()
     }),
     result: joi.object().keys({
@@ -19,6 +20,7 @@ module.exports = {
     notes: '',
     auth: false,
     params: joi.object().keys({
+      actorId: joi.number().example('1000'),
       statusId: joi.number()
     }),
     result: joi.array().items(
@@ -34,6 +36,7 @@ module.exports = {
     notes: '',
     auth: false,
     params: joi.object().keys({
+      actorId: joi.number().example('1000'),
       targetId: joi.number()
     }),
     result: joi.array().items(
@@ -62,6 +65,7 @@ module.exports = {
     notes: '',
     auth: false,
     params: joi.object().keys({
+      actorId: joi.number().example('1000'),
       operationId: joi.number()
     }),
     result: joi.array().items(
@@ -78,6 +82,7 @@ module.exports = {
     notes: '',
     auth: false,
     params: joi.object().keys({
+      actorId: joi.number().example('1000'),
       operationId: joi.number().required()
     }),
     result: joi.object().keys({
@@ -92,6 +97,7 @@ module.exports = {
     notes: '',
     auth: false,
     params: joi.object().keys({
+      actorId: joi.number().example('1000'),
       channelId: joi.number()
     }),
     result: joi.array().items(
@@ -140,6 +146,7 @@ module.exports = {
     notes: '',
     auth: false,
     params: joi.object().keys({
+      actorId: joi.number().example('1000'),
       templateId: joi.number(),
       channelId: joi.number(),
       operationId: joi.number(),
@@ -163,6 +170,7 @@ module.exports = {
     notes: '',
     auth: false,
     params: joi.object().keys({
+      actorId: joi.number().example('1000'),
       name: joi.string(),
       channelId: joi.number().required(),
       operationId: joi.number().required(),
@@ -184,6 +192,7 @@ module.exports = {
     notes: '',
     auth: false,
     params: joi.object().keys({
+      actorId: joi.number().example('1000'),
       templateId: joi.number().required(),
       name: joi.string(),
       channelId: joi.number(),
@@ -222,6 +231,7 @@ module.exports = {
     notes: '',
     auth: false,
     params: joi.object().keys({
+      actorId: joi.number().example('1000'),
       notificationId: joi.number(),
       templateId: joi.number(),
       statusId: joi.number(),
