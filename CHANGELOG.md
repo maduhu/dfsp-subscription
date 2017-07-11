@@ -1,3 +1,19 @@
+<a name="0.5.0"></a>
+# [0.5.0](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.4.4...v0.5.0) (2017-07-11)
+
+
+### Bug Fixes
+
+* integration tests ([f792171](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/f792171))
+
+
+### Features
+
+* add actorId to notification.notification.add procedure ([5e81407](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/5e81407))
+* add statusName to notification.fetch and add actorId to the api doc ([144d9e9](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/144d9e9))
+
+
+
 <a name="0.4.4"></a>
 ## [0.4.4](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.4.3...v0.4.4) (2017-07-05)
 
