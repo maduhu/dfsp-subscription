@@ -64,6 +64,7 @@ test({
             destination: joi.string(),
             notificationId: joi.number(),
             statusId: joi.number(),
+            statusName: joi.string(),
             templateId: joi.number(),
             params: joi.object().keys({
               amount: joi.number(),
