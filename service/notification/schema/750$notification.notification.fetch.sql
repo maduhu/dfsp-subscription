@@ -69,7 +69,7 @@ BEGIN
 
     RETURN QUERY
     SELECT
-        "@notifications" AS "data",
+        COALESCE("@notifications", '[]') AS "data",
         "@pagination" AS "pagination",
         true AS "isSingleResult";
 END
