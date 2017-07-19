@@ -242,7 +242,17 @@ module.exports = {
       pageNumber: joi.number()
     }),
     result: joi.object().keys({
-      data: joi.object(),
+      data: joi.array().items(joi.object({
+        notificationId: joi.number(),
+        templateId: joi.number(),
+        statusId: joi.number(),
+        statusName: joi.string(),
+        destination: joi.string(),
+        content: joi.string(),
+        params: joi.object(),
+        createdOn: joi.date(),
+        updatedOn: joi.date()
+      })),
       pagination: joi.object(),
       isSingleResult: joi.boolean()
     })
