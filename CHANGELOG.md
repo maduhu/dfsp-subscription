@@ -1,3 +1,13 @@
+<a name="0.5.1"></a>
+## [0.5.1](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.5.0...v0.5.1) (2017-07-19)
+
+
+### Bug Fixes
+
+* Fix for notification.fetch joi validation ([b71d42d](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/b71d42d))
+
+
+
 <a name="0.5.0"></a>
 # [0.5.0](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.4.4...v0.5.0) (2017-07-11)
 
