@@ -239,7 +239,9 @@ module.exports = {
       from: joi.date(),
       to: joi.date(),
       pageSize: joi.number(),
-      pageNumber: joi.number()
+      pageNumber: joi.number(),
+      recordsTotal: joi.number(),
+      pagesTotal: joi.number()
     }),
     result: joi.object().keys({
       data: joi.array().items(joi.object({
