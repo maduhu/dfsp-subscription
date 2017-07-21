@@ -44,7 +44,7 @@ BEGIN
             AND
             ("@statusId" IS NULL OR n."statusId" = "@statusId")
             AND
-            ("@destination" IS NULL OR n."destination" = "@destination")
+            ("@destination" IS NULL OR n."destination" ~* "@destination")
             AND
             ("@from" IS NULL OR n."updatedOn" >= "@from")
             AND
