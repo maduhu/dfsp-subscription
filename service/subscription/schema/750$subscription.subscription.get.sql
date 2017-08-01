@@ -4,6 +4,7 @@
 ) RETURNS TABLE(
   "actorId" CHARACTER varying(25),
   "phoneNumber" CHARACTER varying(25),
+  "primary" boolean,
   "isSingleResult" boolean
 )
 AS
@@ -11,6 +12,7 @@ $body$
   SELECT
     s."actorId" AS "actorId",
     p."phoneNumber" AS "phoneNumber",
+    s."primary" AS "primary",
     true AS "isSingleResult"
   FROM
     subscription.subscription AS s

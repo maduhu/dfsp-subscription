@@ -3,19 +3,26 @@
 ) RETURNS TABLE(
   "phoneId" INTEGER,
   "phoneNumber" CHARACTER VARYING(25),
+  "primary" BOOLEAN,
   "isSingleResult" BOOLEAN
 )
 AS
 $BODY$
 #variable_conflict use_column
+DECLARE
+  "@primary" BOOLEAN := true;
 BEGIN
-  INSERT INTO subscription.phone ("phoneNumber")
-  VALUES ("@phoneNumber")
-  ON CONFLICT DO NOTHING;
+  IF EXISTS (SELECT 1 FROM subscription.phone sp WHERE sp."phoneNumber" = "@phoneNumber") THEN
+    "@primary" = false;
+  ELSE
+    INSERT INTO subscription.phone ("phoneNumber")
+    VALUES ("@phoneNumber");
+  END IF;
 RETURN QUERY
   SELECT
     sp."phoneId",
     "@phoneNumber" as "phoneNumber",
+    "@primary" as "primary",
     true AS "isSingleResult"
   FROM 
     subscription.phone sp

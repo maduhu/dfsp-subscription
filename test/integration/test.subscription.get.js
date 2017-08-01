@@ -40,6 +40,7 @@ test({
         assert.equals(joi.validate(result, joi.array().items({
           actorId: joi.string().required(),
           phoneNumber: joi.string().required(),
+          primary: joi.boolean().required(),
           isSingleResult: joi.boolean()
         }).required()).error, null, 'Check array schema from the returned results - phone number')
       }
@@ -56,6 +57,7 @@ test({
         assert.equals(joi.validate(result, joi.array().items({
           actorId: joi.string().required(),
           phoneNumber: joi.string().required(),
+          primary: joi.boolean().required(),
           isSingleResult: joi.boolean()
         }).required()).error, null, 'Check array schema from the returned results - phone number')
       }
