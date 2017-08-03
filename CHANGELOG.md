@@ -1,3 +1,13 @@
+<a name="0.5.5"></a>
+## [0.5.5](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.5.4...v0.5.5) (2017-08-03)
+
+
+### Bug Fixes
+
+* add primary property for subscriptions ([f00d109](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/f00d109))
+
+
+
 <a name="0.5.4"></a>
 ## [0.5.4](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.5.3...v0.5.4) (2017-07-31)
 
