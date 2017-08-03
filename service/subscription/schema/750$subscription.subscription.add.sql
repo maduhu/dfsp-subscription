@@ -5,13 +5,15 @@
   "subscriptionId" integer,
   "actorId" CHARACTER varying(25),
   "phoneNumber" CHARACTER varying(25),
+  "primary" boolean,
   "isSingleResult" boolean
 )
 AS
 $BODY$
 DECLARE
-	"@phoneId" INTEGER;
-	"@subscriptionId" INTEGER;
+  "@phoneId" INTEGER;
+  "@primary" BOOLEAN;
+  "@subscriptionId" INTEGER;
 BEGIN
     IF "@actorId" IS NULL THEN
         RAISE EXCEPTION 'subscription.actorIdMissing';
@@ -21,15 +23,17 @@ BEGIN
     END IF;
 
     SELECT
-      ph."phoneId" 
+      ph."phoneId",
+      ph."primary"
     FROM 
       subscription."phone.add"("@phoneNumber") ph
     INTO
-      "@phoneId";
+      "@phoneId",
+      "@primary";
  WITH
    s as (
-      INSERT INTO subscription.subscription ("phoneId", "actorId")
-      VALUES ("@phoneId", "@actorId")
+      INSERT INTO subscription.subscription ("phoneId", "actorId", "primary")
+      VALUES ("@phoneId", "@actorId", "@primary")
       RETURNING *
     )
     SELECT
@@ -42,6 +46,7 @@ RETURN QUERY
     "@subscriptionId" as "subscriptionId",
     "@actorId" as "actorId",
     "@phoneNumber" as "phoneNumber",
+    "@primary" as "primary",
     true AS "isSingleResult";
 END
 $BODY$

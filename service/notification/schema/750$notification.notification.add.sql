@@ -19,7 +19,7 @@ BEGIN
     ON COMMIT DROP;
     
     IF "@destinations" IS NULL THEN
-        INSERT INTO "phoneNumbers" SELECT "phoneNumber" FROM subscription."subscription.fetch"("@actorId", null);
+        INSERT INTO "phoneNumbers" SELECT "phoneNumber" FROM subscription."subscription.fetch"("@actorId", null, null);
     ELSE
         INSERT INTO "phoneNumbers" SELECT unnest("@destinations") as "phoneNumber";
     END IF;
