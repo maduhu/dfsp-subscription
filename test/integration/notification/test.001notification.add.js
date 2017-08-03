@@ -41,7 +41,7 @@ test({
           operationId: 1,
           targetId: 1,
           destinations: DESTINATIONS,
-          params: '{"amount": 5, "currency": "USD"}'
+          params: '{"amount": 5, "currency": "TZS"}'
         }
       },
       result: (result, assert) => {
