@@ -1,3 +1,13 @@
+<a name="0.5.6"></a>
+## [0.5.6](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.5.5...v0.5.6) (2017-08-04)
+
+
+### Bug Fixes
+
+* change currency from usd to tzs ([42a2eea](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/42a2eea))
+
+
+
 <a name="0.5.5"></a>
 ## [0.5.5](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.5.4...v0.5.5) (2017-08-03)
 
