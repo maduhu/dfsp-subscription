@@ -1,3 +1,13 @@
+<a name="0.5.7"></a>
+## [0.5.7](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.5.6...v0.5.7) (2017-08-15)
+
+
+### Bug Fixes
+
+* remove index_test file ([6f42426](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/6f42426))
+
+
+
 <a name="0.5.6"></a>
 ## [0.5.6](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.5.5...v0.5.6) (2017-08-04)
 
