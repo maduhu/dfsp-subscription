@@ -1,3 +1,13 @@
+<a name="0.5.8"></a>
+## [0.5.8](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.5.7...v0.5.8) (2017-08-17)
+
+
+### Bug Fixes
+
+* remove unused conditions to increase code coverage ([d89f671](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/commit/d89f671))
+
+
+
 <a name="0.5.7"></a>
 ## [0.5.7](https://github.com/softwaregroup-bg/@leveloneproject/dfsp-subscription/compare/v0.5.6...v0.5.7) (2017-08-15)
 
